@@ -269,12 +269,8 @@ class DataParser():
     *log_paths: Paths to WPIlog files to be parsed.
     """
 
-    log_dfs = {}
-
-    def __init__(self, *log_paths: str):
-        self.log_paths = log_paths
-
-        for path in log_paths:
+    def convert_wpilog_to_csv(*log_paths: str):
+        for path in log_paths[1:]:
             log_keys = []
 
             found_keys = False

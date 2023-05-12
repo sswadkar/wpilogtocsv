@@ -2,7 +2,8 @@ from datetime import datetime
 from DataParser import DataParser
 
 start_time = datetime.now()
-a = DataParser("temp_q60.wpilog")
+data_parser = DataParser()
+data_parser.convert_wpilog_to_csv("temp_q60.wpilog")
 
 print("Time to completion")
 print("==================")
